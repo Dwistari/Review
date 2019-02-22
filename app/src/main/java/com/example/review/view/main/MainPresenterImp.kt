@@ -1,4 +1,4 @@
-package com.example.review.view
+package com.example.review.view.main
 
 import com.example.jogjatour.data.ReviewInteractor
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -31,6 +31,27 @@ class MainPresenterImp : MainPresenter {
                 )
             }
     }
+
+    override fun createReview() {
+        view.showLoading()
+        interactor.createReview()
+            .subscribeOn(Schedulers.io())
+            ?.observeOn(AndroidSchedulers.mainThread())
+            ?.subscribe(
+                {
+                    view.dismissLoading()
+                },
+                {
+                    view.showErrorAlert(it)
+                    view.dismissLoading()
+                }
+            )?.let {
+                disposables.add(
+                    it
+                )
+            }
+    }
+
     override fun initView(view: MainView) {
         this.view = view
     }

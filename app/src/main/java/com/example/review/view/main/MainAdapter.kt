@@ -1,4 +1,4 @@
-package com.example.review.view
+package com.example.review.view.main
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater

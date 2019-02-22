@@ -1,4 +1,4 @@
-package com.example.review.view
+package com.example.review.view.main
 
 import com.example.review.data.model.Review
 

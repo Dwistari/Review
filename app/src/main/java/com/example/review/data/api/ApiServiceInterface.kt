@@ -7,12 +7,19 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.converter.gson.GsonConverterFactory
 import io.reactivex.Observable
-import retrofit2.http.GET
+import okhttp3.ResponseBody
+import retrofit2.http.*
 
 interface ApiServiceInterface {
 
-    @GET("collections/0a7abfacd4f31736d978")
+    @POST("api/v1/reviews/")
+    fun createReview (): Observable<ResponseBody>
+
+    @GET("api/v1/reviews/")
     fun getReview(): Observable<ReviewResponse>
+
+    @DELETE("api/v1/reviews/1")
+    fun deleteReview(): Observable<ResponseBody>
 
     companion object Factory {
         fun create(): ApiServiceInterface {
@@ -20,7 +27,7 @@ interface ApiServiceInterface {
                 .client(client)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl(Constants.base_url)
+                .baseUrl(Constants.app_reference)
                 .build()
 
             return retrofit.create(ApiServiceInterface::class.java)
