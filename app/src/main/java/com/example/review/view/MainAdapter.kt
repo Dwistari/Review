@@ -5,8 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.review.R
-import com.example.review.data.Review
-import com.squareup.picasso.Picasso
+import com.example.review.data.model.Review
 import kotlinx.android.synthetic.main.item_review.view.*
 
 class MainAdapter : RecyclerView.Adapter<MainAdapter.HomeViewHolder>() {

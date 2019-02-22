@@ -1,7 +1,7 @@
 package com.example.jogjatour.data.api
 
 import com.example.review.utils.Constants
-import com.example.review.data.ReviewResponse
+import com.example.review.data.model.ReviewResponse
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

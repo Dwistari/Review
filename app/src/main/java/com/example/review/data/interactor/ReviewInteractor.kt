@@ -1,7 +1,7 @@
 package com.example.jogjatour.data
 
 import com.example.jogjatour.data.api.ApiServiceInterface
-import com.example.review.data.ReviewResponse
+import com.example.review.data.model.ReviewResponse
 import io.reactivex.Observable
 
 class ReviewInteractor {

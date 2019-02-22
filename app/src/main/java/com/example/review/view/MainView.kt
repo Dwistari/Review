@@ -1,6 +1,6 @@
 package com.example.review.view
 
-import com.example.review.data.Review
+import com.example.review.data.model.Review
 
 interface MainView {
 

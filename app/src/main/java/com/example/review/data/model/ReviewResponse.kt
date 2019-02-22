@@ -1,12 +1,11 @@
-package com.example.review.data
+package com.example.review.data.model
 
-import android.app.DownloadManager
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 class ReviewResponse(
 
-    @SerializedName("data")
+    @SerializedName("")
     @Expose
     var review:  MutableList<Review>
 )

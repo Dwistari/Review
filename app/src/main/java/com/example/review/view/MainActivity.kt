@@ -7,7 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import com.example.review.R
-import com.example.review.data.Review
+import com.example.review.data.model.Review
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity: AppCompatActivity(), MainView {

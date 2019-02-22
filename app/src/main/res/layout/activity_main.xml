@@ -35,7 +35,7 @@
             android:text="Upload Gambar"/>
     <Button
             android:id="@+id/btn_submit"
-            android:layout_marginStart="300dp"
+            android:layout_marginStart="200dp"
             android:layout_below="@id/input_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
