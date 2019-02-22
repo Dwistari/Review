@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName
 
 class ReviewResponse(
 
-    @SerializedName("")
+    @SerializedName("requests")
     @Expose
     var review:  MutableList<Review>
 )
